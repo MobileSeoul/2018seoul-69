@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.dungji">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.kakao.sdk.AppKey"
+                   android:value="ad22d7874c6dc102324dc1349de50e19"/>
+
+        <activity
+            android:name="com.project.dungji.activitiy.IntroActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.project.dungji.activitiy.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
+        <activity android:name="com.project.dungji.activitiy.search.SearchMainActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name="com.project.dungji.activitiy.search.SearchResultActivity"
+                  android:screenOrientation="portrait" />
+        <activity android:name="com.project.dungji.activitiy.ShelterDetailActivity"
+                  android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
